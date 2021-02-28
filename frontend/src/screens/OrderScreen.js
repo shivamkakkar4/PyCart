@@ -25,13 +25,12 @@ const OrderScreen = ({ match }) => {
       .reduce((acc, item) => acc + item.price * item.qty, 0)
       .toFixed(2);
   }
-  //ATDxmJ4Pkl1D5WdVBspyzKa5-CaBwrf-ZOYLhQ1O9f4RBDLQTaM17ZBmbzBVeUsyJPXQ05LXnSvpSBZ3
 
   const addPayPalScript = () => {
     const script = document.createElement("script");
     script.type = "text/javascript";
     script.src =
-      "https://www.paypal.com/sdk/js?client-id=ATDxmJ4Pkl1D5WdVBspyzKa5-CaBwrf-ZOYLhQ1O9f4RBDLQTaM17ZBmbzBVeUsyJPXQ05LXnSvpSBZ3";
+      "https://www.paypal.com/sdk/js?client-id=AWOMl1jyfcVN_5V7kfsluHbSphud2inDuxlybVOVEf77xpgHm5XFKkK06YkYXJgb_dLghaFgArE8hyK_";
     script.async = true;
     script.onload = () => {
       setSdkReady(true);
