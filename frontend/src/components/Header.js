@@ -24,14 +24,9 @@ const Header = () => {
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
+              {/* <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between"> */}
               <SearchBox />
-              <Nav className="mr-auto">
-                <LinkContainer to="/cart">
-                  <Nav.Link>
-                    <i className="fas fa-shopping-cart"></i> Cart
-                  </Nav.Link>
-                </LinkContainer>
-
+              <Nav className="ml-auto">
                 {userInfo ? (
                   <NavDropdown title={userInfo.name} id="username">
                     <LinkContainer to="/profile">
@@ -62,6 +57,11 @@ const Header = () => {
                     </LinkContainer>
                   </NavDropdown>
                 )}
+                <LinkContainer to="/cart">
+                  <Nav.Link>
+                    <i className="fas fa-shopping-cart"></i> Cart
+                  </Nav.Link>
+                </LinkContainer>
               </Nav>
             </Navbar.Collapse>
           </Container>
